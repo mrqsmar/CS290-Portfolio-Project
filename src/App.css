@@ -1,0 +1,443 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+  /*----- Imports  -----/* 
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } */
+    /* ...or hosted services like Google Fonts */ 
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css"; 
+  */
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+/*   ----- Variables  -----  */
+:root {
+    --custom-color-olive: rgb(131, 140, 59);
+    --custom-color-olive-dark: rgb(85, 107, 47);
+    --custom-color-olive-light: rgb(184, 188, 134);
+    --custom-color-olive-darker: rgb(49, 57, 28);
+    --custom-color-olive-lighter: rgb(148,171,83);
+    --custom-color-olive-alpha: rgba(131, 140, 59, 0.662);
+    --custom-color-sky: rgb(85, 206, 255);
+    --custom-color-sky-dark: rgb(0,71,100);
+    --custom-color-sky-light: rgb(185, 235, 255);
+    --custom-color-sky-alpha: rgba(85, 207, 255, 0.581);
+    --custom-color-gray-light: rgb(211, 211, 211);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-color: var(--custom-color-olive);
+    background-image: url(images/Downtown-Bellevue-Park-Landscape.JPG);
+    background-repeat: no-repeat fixed;
+    background-size: cover;
+    color: var(--custom-color-sky-dark);
+    font-family: 'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0px;
+    width: 1200px;
+    max-width: 95%; 
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    font-family: 'Lato', sans-serif;
+    color: var(--custom-color-sky-dark);
+    padding: 10px 20px;
+    background-color: var(--custom-color-olive-light);
+    text-align: left;
+  }
+  main {
+    margin: 10px;
+    background-color:var(--custom-color-olive-alpha);
+  }
+  section {
+    padding: 20px 10px 20px 10px;
+    color: var(--color-custom-sky-dark);
+  }
+    article {
+        padding: 20px;
+        border: 2.0px solid var(--custom-color-sky-dark);
+        border-bottom: 2.0px solid var(--custom-color-sky-dark);
+        margin-bottom: 20px;
+    }
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+    color: var(--custom-color-sky-dark);
+    background-color: var(--custom-color-olive-lighter);
+    padding: 10px;
+    padding-left: 10px;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+
+  #web-development-concepts {
+    text-align: left;
+    color: var(--custom-color-olive);
+    display: flex;
+    flex-wrap: row wrap;
+  }
+
+  #web-development-concepts a {
+    background-color: var(--custom-color-sky);
+    border: 5px groove var(--custom-color-olive-light);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: var(--custom-color-olive);
+    text-decoration: none;
+  }
+
+  #web-development-concepts a:hover {
+    color: var(--custom-color-sky-dark);
+  }
+
+  #web-development-concepts a:visited {
+    color: var(--custom-color-sky-dark);
+  }
+
+  nav:not(#web-development-concepts) {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: center;
+    top: 35px;
+    right: 10%;
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+  }
+  nav:not(#web-development-concepts) a {
+    background-color: var(--custom-color-sky);
+    font-weight: bold;
+    border: 11px groove var(--custom-color-olive-light);
+    color: var(--custom-color-olive);
+    text-decoration: none;
+  }
+
+  nav:not(#web-development-concepts) a:hover {
+    background-color: var(--custom-color-sky-light);
+    color: var(--custom-color-olive);
+    text-decoration: none;
+  }
+  
+  /*  -----  Typography  ----- */
+  p {
+    padding-left: 0px;
+  }
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt, dd {
+    padding-left: 25px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 { } 
+  h1 {}
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    color: var(--custom-color-sky-dark);
+  }
+  h3 {
+    color: var(--custom-color-olive-darker);
+    font-weight: bold;
+  }
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    background-color: var(--custom-color-sky-alpha);
+    border: 3px solid var(--custom-color-olive-darker);
+    border-collapse:collapse;
+    font-size: 1.5rem;
+    margin: 0 center;
+    width: 1100px;
+  }
+  
+  caption {
+    background-color: var(--custom-color-sky-alpha);
+    border: 2px dotted var(--custom-color-olive-darker);
+    color: var(--custom-color-sky-dark);
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr th{
+    border: 2px solid var(--custom-color-olive);
+    color: var(--custom-color-olive-darker);
+  }
+    tr:nth-child(even) td {background-color:var(--custom-color-sky-light);}
+    tr:nth-child(odd) td {background-color:var(--custom-color-sky);}
+ tr td {
+  border: 2px solid var(--custom-color-olive-light);
+  color: var(--custom-color-olive);
+ }
+    td:nth-child(1) 
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form, button, input, select, textarea{
+    font-family: 'Lato', san-serif;
+  }
+
+  
+  form {
+    width: 100%;
+  }
+
+  fieldset {
+    border: 2px solid var(--custom-color-sky-dark);
+    margin-top: 3%;
+    padding: 1%;
+  }
+
+  *::placeholder{
+    font-size: bold;
+    border: 2px solid var(--color-custom-sky-dark);
+  }
+
+  *:required{
+    border: 2px solid green;
+  }
+  
+  button[type=submit]:hover{
+    border: 2px solid var(--custom-color-olive-light);
+    background-color: var(--custom-color-sky);
+  }
+  button[type=submit]:focus{
+    border: 2px solid var(--custom-color-sky);
+    background-color: var(--custom-color-olive-alpha);
+  }
+
+  label.required:after{
+    content:" *";
+    color:red;
+  }
+
+    legend {
+      font-weight: bold;
+      background-color: var(--custom-color-olive-light);
+      border: 2px solid var(--custom-color-sky);
+    }
+
+  label {
+    display: block;
+    margin-top: 3%;
+  }
+
+    button {
+      font-weight: bold;
+      color: var(--custom-color-sky-dark);
+    }
+    .staffButton {
+      margin: auto;
+    }
+    #throughBrowser {
+      color: var(--custom-color-olive-dark);
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 10px 10px;
+    }
+
+    #throughBrowser:hover {
+      background-color: var(--custom-color-olive-dark);
+      color: var(--custom-color-gray-light);
+    }
+
+    #throughServer {
+      color: var(--custom-color-sky);
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 10px 10px;
+    }
+
+    #throughServer:hover {
+      background-color: var(--custom-color-sky);
+      color: var(--custom-color-gray-light);
+    }
+    
+    input {
+      margin: 0%;
+      background-color: var(--custom-color-sky-light);
+    }
+    output {}
+    meter {}
+    progress {}
+    select {}
+      optgroup {}
+      option {}
+    textarea {}
+  
+  /* ----- Media ----- */
+  /*
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gallery img {
+    border-color: var(--custom-color-olive-darker);
+    border: solid;
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+.gallery figure {
+    width: 600px;
+    margin: 2%;
+    padding: 0px;
+    border: 1.5px solid var(--color-olive-darker);
+    border-radius: 10px;
+}
+.gallery figcaption {
+    display: inline-block;
+    padding: 0px;
+    color: var(--color-custom-sky-dark);
+}
+.gallery figure img {
+    width: 100%;
+}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {}
+
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {
+    .gallery img {
+        width: 300px;
+    }
+  }
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media (max-width: 300px) {
+    .gallery img {
+        width: 200px;
+    }
+  }
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
+
+  /*
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+*/
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
